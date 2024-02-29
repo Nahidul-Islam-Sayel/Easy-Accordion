@@ -1,0 +1,44 @@
+.accordion-container {
+  }
+  
+  .accordion-item {
+	margin-bottom: 20px;
+  }
+  
+  .accordion-item input[type="text"],
+  .accordion-item textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+  }
+  
+  .accordion-item button {
+	background-color: #dc3545;
+	color: #fff;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  
+	&:hover {
+	  background-color: #c82333;
+	}
+  }
+  
+  .add-item-button {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  
+	&:hover {
+	  background-color: #0056b3;
+	}
+  }
+  
