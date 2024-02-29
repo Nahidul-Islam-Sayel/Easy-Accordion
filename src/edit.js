@@ -36,9 +36,9 @@ export default function edit({ attributes, setAttributes }) {
                         placeholder={__('Content', 'easy-accordion-gutenberg')}
                         value={item.content}
                         onChange={(e) => updateItem(index, 'content', e.target.value)}
-                        className="accordion-content"
+                        className="accordion-content-text"
                     />
-                    <button onClick={() => removeItem(index)} className="accordion-remove">{__('Remove', 'easy-accordion-gutenberg')}</button>
+                    <button onClick={() => removeItem(index)} className="accordion-remove-edit">{__('Remove', 'easy-accordion-gutenberg')}</button>
                 </div>
             ))}
             <button onClick={addItem} className="accordion-add">{__('Add Item', 'easy-accordion-gutenberg')}</button>

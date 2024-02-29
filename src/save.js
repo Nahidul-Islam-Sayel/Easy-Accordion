@@ -1,24 +1,24 @@
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
+import React from 'react';
+import './style.scss'; 
 import { useBlockProps } from '@wordpress/block-editor';
 
-/**
- * The save function defines the way in which the different attributes should
- * be combined into the final markup, which is then serialized by the block
- * editor into `post_content`.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
- *
- * @return {Element} Element to render.
- */
-export default function save() {
-	return (
-		<p { ...useBlockProps.save() }>
-			{ 'Easy Accordion Gutenberg – hello from the saved content!' }
-		</p>
-	);
+export default function save({ attributes }) {
+    const { items } = attributes;
+	
+
+    return (
+        <div { ...useBlockProps.save() } className="my-accordion-container">
+            {items.map((item, index) => (
+                <div key={index} className="my-accordion-item">
+                    <input type="checkbox" id={`my-accordion-item-${index}`} />
+                    <label htmlFor={`my-accordion-item-${index}`} className="my-accordion-title">
+                        {item.title}
+                    </label>
+                    <div className="my-accordion-content">
+                        <p>{item.content}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
 }

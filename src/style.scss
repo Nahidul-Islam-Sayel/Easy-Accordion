@@ -1,12 +1,54 @@
-/**
- * The following styles get applied both on the front of your site
- * and in the editor.
- *
- * Replace them with your own styles or remove the file completely.
- */
+.my-accordion-container {
+	width: 100%;
+	max-width: 600px; /* Adjust width as needed */
+	margin: 0 auto; /* Center the accordion container */
+}
 
-.wp-block-create-block-easy-accordion-gutenberg {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+.my-accordion-item {
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 20px;
+}
+
+.my-accordion-title {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	cursor: pointer;
+	background-color: #f5f5f5;
+	color: #333;
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+}
+
+.my-accordion-title:hover {
+	background-color: #e0e0e0;
+}
+
+.my-accordion-content {
+	padding: 15px;
+	background-color: #fff;
+	color: #555;
+	display: none; /* Hide content by default */
+}
+
+input[type="checkbox"] {
+	display: none; /* Hide the checkboxes */
+}
+
+input[type="checkbox"]:checked ~ .my-accordion-title + .my-accordion-content {
+	display: block; /* Show content when checkbox is checked */
+}
+
+.my-accordion-title::after {
+	content: '\02795'; /* Unicode character for "plus" sign */
+	font-size: 1.2em;
+	color: #777;
+	margin-left: auto; /* Move the icon to the right */
+}
+
+input[type="checkbox"]:checked ~ .my-accordion-title::after {
+	content: '\02796'; /* Unicode character for "minus" sign */
 }
