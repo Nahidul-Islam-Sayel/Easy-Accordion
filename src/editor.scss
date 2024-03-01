@@ -1,56 +1,61 @@
 .accordion-container {
-	.accordion-add{
-		background-color: #007bff;
-		color: #fff;
-		border: none;
-		padding: 8px 16px;
-		border-radius: 4px;
-		cursor: pointer;
-		transition: background-color 0.3s ease;
-	  }
+  padding: 20px;
+}
+
+.accordion-add {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
 }
 
 .accordion-item {
   margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-.accordion-item input[type="text"],
-.accordion-item textarea {
-  width: 100%;
-  padding: 10px;
-  
+.accordion-title {
+  width: calc(100% - 40px);
+  padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
-.accordion-content-text{
-	height: 100px;
+
+.accordion-content-text {
+  width: calc(100% - 40px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  min-height: 100px;
+  resize: vertical;
 }
-.accordion-item button {
+
+button.accordion-remove-edit {
   background-color: #dc3545;
   color: #fff;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
   &:hover {
-	background-color: #c82333;
+    background-color: #c82333;
   }
-}
-
-.add-item-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-	background-color: #0056b3;
-  }
- 
 }

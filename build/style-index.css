@@ -4,8 +4,8 @@
 @charset "UTF-8";
 .my-accordion-container {
   width: 100%;
-  max-width: 600px; /* Adjust width as needed */
-  margin: 0 auto; /* Center the accordion container */
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .my-accordion-item {
@@ -35,26 +35,26 @@
   padding: 15px;
   background-color: #fff;
   color: #555;
-  display: none; /* Hide content by default */
+  display: none;
 }
 
 input[type=checkbox] {
-  display: none; /* Hide the checkboxes */
+  display: none;
 }
 
 input[type=checkbox]:checked ~ .my-accordion-title + .my-accordion-content {
-  display: block; /* Show content when checkbox is checked */
+  display: block;
 }
 
 .my-accordion-title::after {
-  content: "➕"; /* Unicode character for "plus" sign */
+  content: "➕";
   font-size: 1.2em;
   color: #777;
-  margin-left: auto; /* Move the icon to the right */
+  margin-left: auto;
 }
 
 input[type=checkbox]:checked ~ .my-accordion-title::after {
-  content: "➖"; /* Unicode character for "minus" sign */
+  content: "➖";
 }
 
 /*# sourceMappingURL=style-index.css.map*/

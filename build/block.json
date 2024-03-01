@@ -28,6 +28,26 @@
           }
         }
       }
+    },
+    "italic": {
+      "type": "boolean",
+      "default": false
+    },
+    "bold": {
+      "type": "boolean",
+      "default": false
+    },
+    "underline": {
+      "type": "boolean",
+      "default": false
+    },
+    "textColor": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "lineColor": {
+      "type": "string",
+      "default": "#000000"
     }
   },
   "textdomain": "easy-accordion-gutenberg",
